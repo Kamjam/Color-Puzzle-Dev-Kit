@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerGridMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    [SerializeField] private float moveSpeed = 5f;
 
     public Transform movePointer;
     public LayerMask colliderMask;
-    //public Animator anim;
+    public Animator anim;
 
     void Start()
     {
@@ -29,19 +29,23 @@ public class PlayerGridMovement : MonoBehaviour
         {
             if(Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
-                //checks if the player is colliding with layer mask before allowing the movement
-                if(!Physics2D.OverlapCircle(movePointer.position + horzMovement, .2f, colliderMask))
+                //checks if the player is colliding with layer mask before allowing the movement, else get pushed back
+                if(!Physics2D.OverlapCircle(movePointer.position + horzMovement, .45f, colliderMask))
                 {    
                     movePointer.position += horzMovement;
                 }
+                else
+                    movePointer.position -= horzMovement;
             }
             //else if, to prevent diagonal movement
-            if(Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
+            else if(Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
             {
-                if(!Physics2D.OverlapCircle(movePointer.position + horzMovement, .2f, colliderMask))
+                if(!Physics2D.OverlapCircle(movePointer.position + horzMovement, .45f, colliderMask))
                 {
                     movePointer.position += vertMovement;
                 }
+                else
+                    movePointer.position -= vertMovement;
             }
 
             //anim.SetBool("moving", false);
