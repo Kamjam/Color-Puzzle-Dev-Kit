@@ -4,47 +4,49 @@ using UnityEngine;
 
 public class PlayerGridMovement : MonoBehaviour
 {
-    public float speed = 5f;
-    public Transform movePoint;
-    public LayerMask ColliderLayer;
+    public float moveSpeed = 5f;
 
-    public Animator anim;
+    public Transform movePointer;
+    public LayerMask colliderMask;
+    //public Animator anim;
 
-    // Start is called before the first frame update
     void Start()
     {
-        movePoint.parent = null;
+        //transform is no longer a child of the player
+        movePointer.parent = null;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //player moves towards the move point
-        transform.position = Vector3.MoveTowards(transform.position, movePoint.position, speed * Time.deltaTime);
+        Vector3 horzMovement = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
+        Vector3 vertMovement = new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
 
-        //if player is at the move point
-        if(Vector3.Distance(transform.position, movePoint.position) <= .05f)
-        {        
+        //player moves towards the move point   
+        transform.position = Vector3.MoveTowards(transform.position, movePointer.position, moveSpeed * Time.deltaTime);
+
+        //makes sure the player is near the move point in order to move
+        if(Vector3.Distance(transform.position, movePointer.position) <= .05f)
+        {
             if(Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
-                if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), .2f, ColliderLayer))
-                {                
-                    movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
-                }           
+                //checks if the player is colliding with layer mask before allowing the movement
+                if(!Physics2D.OverlapCircle(movePointer.position + horzMovement, .2f, colliderMask))
+                {    
+                    movePointer.position += horzMovement;
+                }
             }
-            else if(Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
+            //else if, to prevent diagonal movement
+            if(Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
             {
-                if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f), .2f, ColliderLayer))
-                { 
-                    movePoint.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
+                if(!Physics2D.OverlapCircle(movePointer.position + horzMovement, .2f, colliderMask))
+                {
+                    movePointer.position += vertMovement;
                 }
             }
 
-            anim.SetBool("moving", false);
+            //anim.SetBool("moving", false);
         }
-        else
-        {
-            anim.SetBool("moving", true);
-        }
+        /*else
+            anim.SetBool("moving", true);*/
     }
 }
