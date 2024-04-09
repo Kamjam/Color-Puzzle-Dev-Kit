@@ -18,7 +18,7 @@ public class ToggleInventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("space") && !toggleMenu)
+        if(Input.GetKeyDown("i") && !toggleMenu)
         {
             InventoryMenu.SetActive(true);
             toggleMenu = true;
@@ -28,7 +28,7 @@ public class ToggleInventory : MonoBehaviour
             //pause
             Time.timeScale = 0;
         }
-        else if(Input.GetKeyDown("space") && toggleMenu)
+        else if(Input.GetKeyDown("i") && toggleMenu)
         {
             //unpause
             Time.timeScale = 1;
