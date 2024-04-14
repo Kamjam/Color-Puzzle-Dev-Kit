@@ -5,7 +5,8 @@ using UnityEngine;
 public class Dye : MonoBehaviour
 {
     [SerializeField] private string dyeColor;
-    [SerializeField] private Sprite sprite;
+    [SerializeField] private Sprite dyeSprite;
+    [SerializeField] private int dyeAmount;
 
     private InventoryManager inventoryManager;
 
@@ -21,8 +22,13 @@ public class Dye : MonoBehaviour
         //collision with player adds the dye to the inventory
         if(collision.gameObject.tag == "Player")
         {
-            inventoryManager.AddDye(dyeColor, sprite);
-            Destroy(gameObject);
+            //calculate and return an int
+            int leftOverItems = inventoryManager.AddDye(dyeColor, dyeSprite, dyeAmount);
+
+            if(leftOverItems <= 0)
+                Destroy(gameObject);
+            else
+                dyeAmount = leftOverItems;
         }
     }
 }

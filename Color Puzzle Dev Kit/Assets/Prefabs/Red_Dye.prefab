@@ -172,4 +172,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dyeColor: Red
-  sprite: {fileID: 119556897, guid: 2ffbcb2c212fdb7429187552e1b621c0, type: 3}
+  dyeSprite: {fileID: 119556897, guid: 2ffbcb2c212fdb7429187552e1b621c0, type: 3}
+  dyeAmount: 1

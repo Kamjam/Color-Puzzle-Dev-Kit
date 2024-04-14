@@ -5,15 +5,14 @@ using UnityEngine;
 public class DyeSpawn : MonoBehaviour
 {
     [SerializeField] public GameObject dyePrefab;
-    [SerializeField] private Sprite sprite;
-
+    
     public void InstantiateLoot(Vector3 spawnPosition)
     { 
         //Spawn dye
         GameObject dyeGameObj = Instantiate(dyePrefab, spawnPosition, Quaternion.identity);
 
         //Add force so the items slide into a random direction when they spawn
-        float dropForce = 30f;
+        float dropForce = 5f;
         Vector2 dropDirection = new Vector2(0, Random.Range(1.5f, 5.5f));
 
         dyeGameObj.GetComponent<Rigidbody2D>().AddForce(dropDirection * dropForce, ForceMode2D.Impulse);
