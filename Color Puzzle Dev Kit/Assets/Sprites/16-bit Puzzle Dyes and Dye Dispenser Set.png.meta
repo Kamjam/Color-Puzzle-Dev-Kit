@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1589061628b5ef745a935ec4ad80f90d
+guid: 2ffbcb2c212fdb7429187552e1b621c0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -106,194 +106,186 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 16-bit Puzzle Maze Slime Player Set_0
+      name: 16-bit Puzzle Dyes and Dye Dispenser Set_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 47
-        width: 16
-        height: 14
+        x: 5
+        y: 22
+        width: 14
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbbb89c3ff4f5724dbd74d39e5367bfc
-      internalID: -338335417
+      spriteID: 2e1df9c2f2c749340af9d19d41ecb984
+      internalID: 407253545
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16-bit Puzzle Maze Slime Player Set_1
+      name: 16-bit Puzzle Dyes and Dye Dispenser Set_1
       rect:
         serializedVersion: 2
-        x: 4
-        y: 23
-        width: 16
-        height: 14
+        x: 24
+        y: 22
+        width: 12
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 378aaf87bb45b6a4e9d45714820c7252
-      internalID: -203076142
+      spriteID: 71d7acc3748b3944eb0e8dc8b78bbdf0
+      internalID: 119556897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16-bit Puzzle Maze Slime Player Set_2
+      name: 16-bit Puzzle Dyes and Dye Dispenser Set_2
       rect:
         serializedVersion: 2
-        x: 22
-        y: 23
-        width: 16
-        height: 14
+        x: 42
+        y: 22
+        width: 12
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a0be8b4abbb54245a3403b8c5b5afe3
-      internalID: 866904084
+      spriteID: e3ce315791e01c1429ad21d643fd465b
+      internalID: 2033061657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16-bit Puzzle Maze Slime Player Set_3
+      name: 16-bit Puzzle Dyes and Dye Dispenser Set_3
       rect:
         serializedVersion: 2
-        x: 40
-        y: 23
-        width: 16
-        height: 14
+        x: 60
+        y: 22
+        width: 12
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a91b13618cdbea3498839500dba3aeaa
-      internalID: 1182417698
+      spriteID: 9b501b2ceb4359a49bdae19a2c07e877
+      internalID: 364310188
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16-bit Puzzle Maze Slime Player Set_4
+      name: 16-bit Puzzle Dyes and Dye Dispenser Set_4
       rect:
         serializedVersion: 2
-        x: 58
-        y: 23
-        width: 16
-        height: 14
+        x: 6
+        y: 4
+        width: 12
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f156c2a2db92cf541ba47c66eb684cf8
-      internalID: 505005061
+      spriteID: 95a40412c37fe85438ffe3c71b5325cb
+      internalID: -1760241377
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16-bit Puzzle Maze Slime Player Set_5
+      name: 16-bit Puzzle Dyes and Dye Dispenser Set_5
       rect:
         serializedVersion: 2
-        x: 4
-        y: 5
-        width: 16
-        height: 14
+        x: 24
+        y: 4
+        width: 12
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c62b0ca70bc0d0841b5a179318416561
-      internalID: -640578808
+      spriteID: c6a1c0918b457314aa29410d0819b4fd
+      internalID: -808394170
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16-bit Puzzle Maze Slime Player Set_6
+      name: 16-bit Puzzle Dyes and Dye Dispenser Set_6
       rect:
         serializedVersion: 2
-        x: 22
-        y: 5
-        width: 16
-        height: 14
+        x: 42
+        y: 4
+        width: 12
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6508757b010b6704bab0029d2748402d
-      internalID: -839201205
+      spriteID: 8276d2e8fb2f75048b5f2a5aaa445a50
+      internalID: -860831235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16-bit Puzzle Maze Slime Player Set_7
+      name: 16-bit Puzzle Dyes and Dye Dispenser Set_7
       rect:
         serializedVersion: 2
-        x: 40
-        y: 5
-        width: 16
-        height: 14
+        x: 60
+        y: 4
+        width: 12
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1ebb24db0f4635449709c7581ec3b1b
-      internalID: 580779717
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 16-bit Puzzle Maze Slime Player Set_8
-      rect:
-        serializedVersion: 2
-        x: 58
-        y: 5
-        width: 16
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e5ca617db17bda48a662fa404a1305d
-      internalID: -136091852
+      spriteID: c43624dc585cd184d905281e187f19e8
+      internalID: 917825849
       vertices: []
       indices: 
       edges: []
@@ -309,15 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      16-bit Puzzle Maze Slime Player Set_0: -338335417
-      16-bit Puzzle Maze Slime Player Set_1: -203076142
-      16-bit Puzzle Maze Slime Player Set_2: 866904084
-      16-bit Puzzle Maze Slime Player Set_3: 1182417698
-      16-bit Puzzle Maze Slime Player Set_4: 505005061
-      16-bit Puzzle Maze Slime Player Set_5: -640578808
-      16-bit Puzzle Maze Slime Player Set_6: -839201205
-      16-bit Puzzle Maze Slime Player Set_7: 580779717
-      16-bit Puzzle Maze Slime Player Set_8: -136091852
+      16-bit Puzzle Dyes and Dye Dispenser Set_0: 407253545
+      16-bit Puzzle Dyes and Dye Dispenser Set_1: 119556897
+      16-bit Puzzle Dyes and Dye Dispenser Set_2: 2033061657
+      16-bit Puzzle Dyes and Dye Dispenser Set_3: 364310188
+      16-bit Puzzle Dyes and Dye Dispenser Set_4: -1760241377
+      16-bit Puzzle Dyes and Dye Dispenser Set_5: -808394170
+      16-bit Puzzle Dyes and Dye Dispenser Set_6: -860831235
+      16-bit Puzzle Dyes and Dye Dispenser Set_7: 917825849
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

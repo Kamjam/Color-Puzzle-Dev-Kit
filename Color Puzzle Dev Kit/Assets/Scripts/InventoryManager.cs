@@ -13,7 +13,7 @@ public class InventoryManager : MonoBehaviour
         for(int i = 0; i < inventorySlot.Length; i++)
         {
             //not full and the names match or there is no quantity
-            if(inventorySlot[i].isFull == false && inventorySlot[i].dyeColor == color || inventorySlot[i].dyeAmount == 0)
+            if(inventorySlot[i].isFull == false && inventorySlot[i].slot_dyeColor == color || inventorySlot[i].slot_dyeAmount == 0)
             {
                 int leftOverItems = inventorySlot[i].AddItem(color, amount, sprite);
                 //check the number of leftovers

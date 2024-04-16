@@ -8,6 +8,7 @@ public class Dye : MonoBehaviour
     [SerializeField] private Sprite dyeSprite;
     [SerializeField] private int dyeAmount;
 
+    //Ref. to inventory manager
     private InventoryManager inventoryManager;
 
     // Start is called before the first frame update

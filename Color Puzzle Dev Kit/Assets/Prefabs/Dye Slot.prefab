@@ -444,12 +444,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d187a14ec4cc4004bb2eccdae41d07fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dyeColor: 
-  dyeAmount: 0
-  dyeSprite: {fileID: 0}
+  slot_dyeColor: 
+  slot_dyeAmount: 0
+  slot_dyeSprite: {fileID: 0}
   isFull: 0
   maxNumOfItems: 5
   slotAmount: {fileID: 3898306829246613744}
   slotImage: {fileID: 3133356416808530418}
+  currentSlotImage: {fileID: 0}
   selectedPanel: {fileID: 8357163363700550498}
   isSelected: 0
+  setColor: Default
