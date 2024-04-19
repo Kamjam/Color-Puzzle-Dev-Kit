@@ -492,6 +492,7 @@ GameObject:
   - component: {fileID: 237133360}
   - component: {fileID: 237133366}
   - component: {fileID: 237133365}
+  - component: {fileID: 237133367}
   m_Layer: 5
   m_Name: Inventory Canvas
   m_TagString: Untagged
@@ -615,6 +616,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InventoryMenu: {fileID: 864194115}
   toggleMenu: 0
+--- !u!114 &237133367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237133359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 308244a37dd4b104e84570b51c6646fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objIndex: 1
 --- !u!1001 &322774132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3874,6 +3888,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1833984382}
+  - component: {fileID: 1833984383}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3897,6 +3912,19 @@ Transform:
   - {fileID: 763725804}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1833984383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833984381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 308244a37dd4b104e84570b51c6646fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objIndex: 0
 --- !u!224 &1874570841 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5131111095640215822, guid: 540daa51c4acc0e4488239ecf99a22d0, type: 3}
