@@ -119,19 +119,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 16-bit Puzzle Dyes and Dye Dispenser Set_0
+      name: 16-bit Puzzle Dyes and Dye Dispenser Set_9
       rect:
         serializedVersion: 2
-        x: 5
-        y: 22
-        width: 14
+        x: 6
+        y: 41
+        width: 12
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,15 +157,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16-bit Puzzle Dyes and Dye Dispenser Set_1
+      name: 16-bit Puzzle Dyes and Dye Dispenser Set_
       rect:
         serializedVersion: 2
-        x: 24
+        x: 5
         y: 22
-        width: 12
+        width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,12 +181,12 @@ TextureImporter:
       name: 16-bit Puzzle Dyes and Dye Dispenser Set_2
       rect:
         serializedVersion: 2
-        x: 42
+        x: 24
         y: 22
         width: 12
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,12 +202,12 @@ TextureImporter:
       name: 16-bit Puzzle Dyes and Dye Dispenser Set_3
       rect:
         serializedVersion: 2
-        x: 60
+        x: 42
         y: 22
         width: 12
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,12 +223,12 @@ TextureImporter:
       name: 16-bit Puzzle Dyes and Dye Dispenser Set_4
       rect:
         serializedVersion: 2
-        x: 6
-        y: 4
+        x: 60
+        y: 22
         width: 12
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,12 +244,12 @@ TextureImporter:
       name: 16-bit Puzzle Dyes and Dye Dispenser Set_5
       rect:
         serializedVersion: 2
-        x: 24
+        x: 6
         y: 4
         width: 12
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,12 +265,12 @@ TextureImporter:
       name: 16-bit Puzzle Dyes and Dye Dispenser Set_6
       rect:
         serializedVersion: 2
-        x: 42
+        x: 24
         y: 4
         width: 12
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,12 +286,12 @@ TextureImporter:
       name: 16-bit Puzzle Dyes and Dye Dispenser Set_7
       rect:
         serializedVersion: 2
-        x: 60
+        x: 42
         y: 4
         width: 12
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,6 +299,27 @@ TextureImporter:
       bones: []
       spriteID: c43624dc585cd184d905281e187f19e8
       internalID: 917825849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16-bit Puzzle Dyes and Dye Dispenser Set_8
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 4
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca0b4e8a7716b864bbb0d5a41b8a726e
+      internalID: -116214443
       vertices: []
       indices: 
       edges: []
@@ -301,14 +335,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      16-bit Puzzle Dyes and Dye Dispenser Set_0: 407253545
-      16-bit Puzzle Dyes and Dye Dispenser Set_1: 119556897
+      16-bit Puzzle Dyes and Dye Dispenser Set_: 119556897
       16-bit Puzzle Dyes and Dye Dispenser Set_2: 2033061657
       16-bit Puzzle Dyes and Dye Dispenser Set_3: 364310188
       16-bit Puzzle Dyes and Dye Dispenser Set_4: -1760241377
       16-bit Puzzle Dyes and Dye Dispenser Set_5: -808394170
       16-bit Puzzle Dyes and Dye Dispenser Set_6: -860831235
       16-bit Puzzle Dyes and Dye Dispenser Set_7: 917825849
+      16-bit Puzzle Dyes and Dye Dispenser Set_8: -116214443
+      16-bit Puzzle Dyes and Dye Dispenser Set_9: 407253545
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

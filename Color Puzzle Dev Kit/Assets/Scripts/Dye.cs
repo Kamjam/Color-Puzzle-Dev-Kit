@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class Dye : MonoBehaviour
 {
+    
+    [Tooltip("The color of this dye")]
     [SerializeField] private string dyeColor;
+    
+    [Tooltip("The correct sprite for this dye color")]
     [SerializeField] private Sprite dyeSprite;
+    
+    [Tooltip("The amount this dye object gives when the player picks it up")]
     [SerializeField] private int dyeAmount;
 
     //Ref. to inventory manager

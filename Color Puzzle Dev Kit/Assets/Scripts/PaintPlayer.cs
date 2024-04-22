@@ -4,30 +4,34 @@ using UnityEngine;
 
 public class PaintPlayer : MonoBehaviour
 {
+    [Tooltip("The player's sprite renderer")]
     public SpriteRenderer Player;
+
+    [Tooltip("The player object")]
+    public GameObject playerObject;
+
+    [Tooltip("The player's default sprite")]
     public Sprite playerDefault;
 
-    //public GameObject currentDyeSlot;
-    InventorySlot inventory;
+    //Ref. to the current slot script
+    CurrentSlot currentSlot;
 
-    //For the player sprite swap
-    //Ref. to the sprite that needs to change colors
-    [SerializeField] Color printColor;
+    //Ref. to the player sprite that while change
     [SerializeField] Sprite[] playerSprites;
 
-    //color scriptable object
-    GameColorPalette colors_db;
+    [SerializeField] Color printColor;
+
+    //Ref. to the Color scriptable object
+    [Tooltip("The Game Color Palette Scriptable Object, which stores all the colors for easy access")]
+    public GameColorPalette colors_db;
+
+    [Tooltip("Checks Whether or not the player has changed colors, DO NOT EDIT")]
+    public bool iscolorSwapped;
+
 
     void Start()
     {
-        //find the player's inventory slot
-        foreach (GameObject obj in FindObjectsOfType(typeof(GameObject)))
-        {
-            if (obj.transform.IsChildOf(transform) && obj.CompareTag("Current Dye Slot"))
-                inventory = obj.transform.GetComponent<InventorySlot>(); 
-        }
-
-        //currentDyeSlot = GetComponent<InventorySlot>(); 
+        currentSlot = GameObject.Find("Current Dye").GetComponent<CurrentSlot>();
     }
 
     void Update()
@@ -39,36 +43,65 @@ public class PaintPlayer : MonoBehaviour
     //changing the player's colors
     public void CheckAndSwap()
     {
-        //count should correspond with the index of the palette database: 
-        //red color, matches red player sprite
+        //count should correspond with the index of the player sprite array: 
+        //red color matches red player sprite, which both are index 0
         int count = 0;
-        if(inventory.playerColorTag == "Red")
+
+        if(currentSlot.playerColorTag == "Red")
         {
-            printColor = colors_db.SetColor("Red");
-            SwapSprite(count, printColor);
+            var color = colors_db.GetColor("Red");
+            //swapSprite(count);
+            swapSprite(count, color);
         }
-        /*else if()
+        else if(currentSlot.playerColorTag == "Orange")
         {
             count = 1;
-            SwapSprite(printColor);
+            var color = colors_db.GetColor("Orange");
+            //swapSprite(count);
+            swapSprite(count, color);
         }
-        else if()
+        else if(currentSlot.playerColorTag == "Yellow")
         {
-            SwapSprite(printColor);
+            count = 2;
+            var color = colors_db.GetColor("Yellow");
+            //swapSprite(count);
+            swapSprite(count, color);
         }
-        else if()
+        else if(currentSlot.playerColorTag == "Green")
         {
-            SwapSprite(printColor);
+            count = 3;
+            var color = colors_db.GetColor("Green");
+            //swapSprite(count);
+            swapSprite(count, color);
         }
-        else if()
+        else if(currentSlot.playerColorTag == "Aqua")
         {
-            SwapSprite(printColor);
+            count = 4;
+            var color = colors_db.GetColor("Aqua");
+            //swapSprite(count);
+            swapSprite(count, color);
         }
-        else if()
+        else if(currentSlot.playerColorTag == "Blue")
         {
-            SwapSprite(printColor);
-        }*/
-
+            count = 5;
+            var color = colors_db.GetColor("Blue");
+            //swapSprite(count);
+            swapSprite(count, color);
+        }
+        else if(currentSlot.playerColorTag == "Purple")
+        {
+            count = 6;
+            var color = colors_db.GetColor("Purple");
+            //swapSprite(count);
+            swapSprite(count, color);
+        }
+        else if(currentSlot.playerColorTag == "Pink")
+        {
+            count = 7;
+            var color = colors_db.GetColor("Pink");
+            //swapSprite(count);
+            swapSprite(count, color);
+        }
         //make sure that sprite has a default state
         else
         {
@@ -77,11 +110,15 @@ public class PaintPlayer : MonoBehaviour
     }
 
     //Function to change the sprite
-    public void SwapSprite(int index, Color color)
+    public void swapSprite(int index, Color color)
     {
+        printColor = color;
+        iscolorSwapped = true
+
         //index should correspond with the index of the palette database: red color, matches red player sprite
         Player.sprite = playerSprites[index];
-        
-        Debug.Log("The player is now a different color!" + "\n" + "Color: " + color);
+
+        if(iscolorSwapped)
+            Debug.Log("The player is now a different color!" + "\n" + "Color: " + ColorUtility.ToHtmlStringRGB(printColor));
     }
 }

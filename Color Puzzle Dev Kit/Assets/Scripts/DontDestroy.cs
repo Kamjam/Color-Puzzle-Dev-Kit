@@ -6,6 +6,8 @@ public class DontDestroy : MonoBehaviour
 {
     //array has to be big enough to store all the objects that you want to stay the same across different scenes
     private static GameObject[] persistentObjs = new GameObject[10]; 
+    
+    [Tooltip("This current object's index in the array, 0 is first, 1 is second, etc.")]
     public int objIndex;
 
     void Awake()

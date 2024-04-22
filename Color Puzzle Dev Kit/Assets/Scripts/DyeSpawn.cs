@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class DyeSpawn : MonoBehaviour
 {
-    [SerializeField] public GameObject dyePrefab;
+    
+    [Tooltip("A dye prefab object from the prefab folder")]
+    [SerializeField] public GameObject dyePrefabSpawn;
     
     public void InstantiateLoot(Vector3 spawnPosition)
     { 
         //Spawn dye
-        GameObject dyeGameObj = Instantiate(dyePrefab, spawnPosition, Quaternion.identity);
+        GameObject dyeGameObj = Instantiate(dyePrefabSpawn, spawnPosition, Quaternion.identity);
 
         //Add force so the items slide into a random direction when they spawn
         float dropForce = 5f;

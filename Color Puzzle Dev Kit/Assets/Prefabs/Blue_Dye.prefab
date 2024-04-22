@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1062615281685646480}
   - component: {fileID: 125778380578858158}
   m_Layer: 0
-  m_Name: Red_Dye
+  m_Name: Blue_Dye
   m_TagString: Dye
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2033061657, guid: 2ffbcb2c212fdb7429187552e1b621c0, type: 3}
+  m_Sprite: {fileID: -860831235, guid: 2ffbcb2c212fdb7429187552e1b621c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -171,6 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f75f87419e07954193f57c3ffcd2dac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dyeColor: Red
-  dyeSprite: {fileID: 2033061657, guid: 2ffbcb2c212fdb7429187552e1b621c0, type: 3}
+  dyeColor: Blue
+  dyeSprite: {fileID: -860831235, guid: 2ffbcb2c212fdb7429187552e1b621c0, type: 3}
   dyeAmount: 1

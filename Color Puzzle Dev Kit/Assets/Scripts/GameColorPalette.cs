@@ -14,18 +14,7 @@ public class GameColorPalette : ScriptableObject
 
     public List<Entry> palette = new List<Entry>();
 
-    public string GetColor(string name) 
-    { 
-        var entry = palette.Find(c => c.name == name);
-        if (entry != null)
-            //return entry.color;
-            return name;
-            
-        //return Color.white;
-        return null;
-    }
-
-    public Color SetColor(string name) 
+    public Color GetColor(string name) 
     { 
         var entry = palette.Find(c => c.name == name);
         if (entry != null)

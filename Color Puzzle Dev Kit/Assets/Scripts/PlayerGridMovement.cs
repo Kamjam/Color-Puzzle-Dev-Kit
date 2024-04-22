@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class PlayerGridMovement : MonoBehaviour
 {
+    
+    [Tooltip("The player's movement speed")]
     [SerializeField] private float moveSpeed = 5f;
 
+    [Tooltip("Object the player follows.")]
     public Transform movePointer;
+
+    [Tooltip("Handles all collision on the collider mask")]
     public LayerMask colliderMask;
+
+    [Tooltip("Player animator")]
     public Animator anim;
 
     void Start()
@@ -30,7 +37,7 @@ public class PlayerGridMovement : MonoBehaviour
             if(Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
                 //checks if the player is colliding with layer mask before allowing the movement, else get pushed back
-                if(!Physics2D.OverlapCircle(movePointer.position + horzMovement, .45f, colliderMask))
+                if(!Physics2D.OverlapCircle(movePointer.position + horzMovement, .25f, colliderMask))
                 {    
                     movePointer.position += horzMovement;
                 }
@@ -40,7 +47,7 @@ public class PlayerGridMovement : MonoBehaviour
             //else if, to prevent diagonal movement
             else if(Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
             {
-                if(!Physics2D.OverlapCircle(movePointer.position + horzMovement, .45f, colliderMask))
+                if(!Physics2D.OverlapCircle(movePointer.position + vertMovement, .25f, colliderMask))
                 {
                     movePointer.position += vertMovement;
                 }
@@ -48,8 +55,11 @@ public class PlayerGridMovement : MonoBehaviour
                     movePointer.position -= vertMovement;
             }
 
+            //uncomment back to add proper movement animation
             //anim.SetBool("moving", false);
         }
+
+        //uncomment back to add proper movement animation
         /*else
             anim.SetBool("moving", true);*/
     }

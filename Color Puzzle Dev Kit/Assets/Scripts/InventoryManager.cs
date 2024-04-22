@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
+    
+    [Tooltip("An array of all inventory slots, Drag all/any new slots inside this dropdown")]
     public InventorySlot[] inventorySlot;
     
     public int AddDye(string color, Sprite sprite, int amount)
@@ -23,8 +25,8 @@ public class InventoryManager : MonoBehaviour
                 return leftOverItems;
             }
         }
+        
         return amount;
-
     }
 
     public void DeselectAllSlots()

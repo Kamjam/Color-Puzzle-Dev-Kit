@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    [SerializeField] GameObject target;
+    
+    [Tooltip("The object that the camera needs to follow")]
+    [SerializeField] public GameObject target;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
     // Update is called once per frame
     void Update()
     {
+        //Camera follows based on the target position
         transform.position = target.transform.position + new Vector3 (0, 1, -10);
     }
 }

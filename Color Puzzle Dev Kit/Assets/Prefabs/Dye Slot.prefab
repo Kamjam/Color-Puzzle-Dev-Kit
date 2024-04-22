@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8225009567428388335}
   - component: {fileID: 3133356416808530418}
   m_Layer: 5
-  m_Name: Dye
-  m_TagString: Red
+  m_Name: Dye Image
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -448,19 +448,10 @@ MonoBehaviour:
   slot_dyeAmount: 0
   slot_dyeSprite: {fileID: 0}
   isFull: 0
+  playerColorTag: 
   maxNumOfItems: 5
   slotAmount: {fileID: 3898306829246613744}
   slotImage: {fileID: 3133356416808530418}
-  currentSlotImage: {fileID: 0}
   selectedPanel: {fileID: 8357163363700550498}
   isSelected: 0
-  Player: {fileID: 0}
-  printColor: {r: 0, g: 0, b: 0, a: 0}
-  playerSprites:
-  - {fileID: -640578808, guid: 1589061628b5ef745a935ec4ad80f90d, type: 3}
-  - {fileID: -203076142, guid: 1589061628b5ef745a935ec4ad80f90d, type: 3}
-  - {fileID: 580779717, guid: 1589061628b5ef745a935ec4ad80f90d, type: 3}
-  - {fileID: -136091852, guid: 1589061628b5ef745a935ec4ad80f90d, type: 3}
-  - {fileID: -839201205, guid: 1589061628b5ef745a935ec4ad80f90d, type: 3}
-  - {fileID: 1182417698, guid: 1589061628b5ef745a935ec4ad80f90d, type: 3}
-  - {fileID: 866904084, guid: 1589061628b5ef745a935ec4ad80f90d, type: 3}
+  player: {fileID: 0}

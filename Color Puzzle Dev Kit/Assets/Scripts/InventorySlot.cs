@@ -8,31 +8,48 @@ using UnityEngine.UI;
 public class InventorySlot : MonoBehaviour, IPointerClickHandler    
 {
     //dye data
-    public string slot_dyeColor;
-    public int slot_dyeAmount;
-    public Sprite slot_dyeSprite;
-    public bool isFull; 
+    [Tooltip("The dye color inside this inventory slot, will change once the player picks up an item, DO NOT EDIT")]
+    [SerializeField] public string slot_dyeColor;
 
-    public string playerColorTag;
+    [Tooltip("The dye amount inside this inventory slot, will change once the player picks up an item, DO NOT EDIT")]
+    [SerializeField] public int slot_dyeAmount;
 
+    [Tooltip("The dye sprite inside this inventory slot, will change once the player picks up an item, DO NOT EDIT")]
+    [SerializeField] public Sprite slot_dyeSprite;
+
+    [Tooltip("Checks whether or not this slot is full")]
+    [SerializeField] public bool isFull; 
+
+    [Tooltip("The dye color tag that is passed to the 'Player Paint' script, DO NOT EDIT")]
+    [SerializeField] public string playerColorTag;
+
+    [Tooltip("Sets the maximum amount of items allowed in this slot")]
     [SerializeField] private int maxNumOfItems;
 
     //dye slot
+    [Tooltip("The 'Quantity Text' text object that will display the number of items in this slot")]
     [SerializeField] private TMP_Text slotAmount;
+
+    [Tooltip("The 'Dye' image object that will display the image of the items in this slot")]
     [SerializeField] private Image slotImage;
 
-    //the dye slot that shows up and moves with the player
-    [SerializeField] public Image currentSlotImage;
-
+    [Tooltip("The inventory panel that the inventory is displayed on")]
     public GameObject selectedPanel;
+
+    [Tooltip("Checks whether or not a current item is selected, DO NOT EDIT")]
     public bool isSelected;
 
     //Ref. to inventory manager
     private InventoryManager inventoryManager;
-
+    
+    //Ref. to player's mini inventory
+    private CurrentSlot currentSlot;
+    
     private void Start()
     {
         inventoryManager = GameObject.Find("Inventory Canvas").GetComponent<InventoryManager>();
+
+        currentSlot = GameObject.Find("Current Dye").GetComponent<CurrentSlot>();
     }
 
     public int AddItem(string name, int amount, Sprite sprite)
@@ -45,8 +62,6 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
 
         //update name and sprite
         this.slot_dyeColor = name;
-        tagPlayer(this.slot_dyeColor);
-
         this.slot_dyeSprite = sprite;
         slotImage.sprite = sprite;
 
@@ -73,13 +88,6 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
         return 0;
     }
 
-    //Tagging the player to pass the color to the paintPlayer function
-    public void tagPlayer(string colorTag)
-    {
-        playerColorTag = colorTag;
-    }
-
-
     //Key press event
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -93,8 +101,8 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
     {
         if(isSelected)
         {
-            //change the mini player slot
-            currentSlotImage.sprite = slot_dyeSprite;
+            //push info to the mini slot
+            currentSlot.AddToCurrentSlot(slot_dyeColor, slot_dyeSprite);
 
             this.slot_dyeAmount -= 1;
             slotAmount.text = this.slot_dyeAmount.ToString();
