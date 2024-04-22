@@ -2,14 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DyeSpawn : MonoBehaviour
+public class DyeSpawner : MonoBehaviour
 {
     
     [Tooltip("A dye prefab object from the prefab folder")]
     [SerializeField] public GameObject dyePrefabSpawn;
+
+    [Tooltip("The sound source within this dye machine object")]
+    public AudioSource spawnSound;
+
+    void Start()
+    {
+        spawnSound = GetComponent<AudioSource>();
+    }
     
-    public void InstantiateLoot(Vector3 spawnPosition)
+    public void InstantiateDye(Vector3 spawnPosition)
     { 
+        //play sound
+        spawnSound.Play(0);
+        
         //Spawn dye
         GameObject dyeGameObj = Instantiate(dyePrefabSpawn, spawnPosition, Quaternion.identity);
 
@@ -24,7 +35,7 @@ public class DyeSpawn : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player" && Input.GetKeyDown("space"))
         {
-            InstantiateLoot(transform.position);
+            InstantiateDye(transform.position);
             
             //ignore colliders after spawning dye
             Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());

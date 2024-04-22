@@ -113,7 +113,7 @@ public class PaintPlayer : MonoBehaviour
     public void swapSprite(int index, Color color)
     {
         printColor = color;
-        iscolorSwapped = true
+        iscolorSwapped = true;
 
         //index should correspond with the index of the palette database: red color, matches red player sprite
         Player.sprite = playerSprites[index];
