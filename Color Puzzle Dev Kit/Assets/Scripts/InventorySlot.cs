@@ -13,6 +13,8 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
     public Sprite slot_dyeSprite;
     public bool isFull; 
 
+    public string playerColorTag;
+
     [SerializeField] private int maxNumOfItems;
 
     //dye slot
@@ -28,14 +30,6 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
     //Ref. to inventory manager
     private InventoryManager inventoryManager;
 
-    //For the player sprite swap
-    //Ref. to the sprite that needs to change colors
-    public GameObject Player;
-    [SerializeField] Color printColor;
-    [SerializeField] Sprite[] playerSprites;
-
-    //color scriptable object
-    GameColorPalette colors_db;
     private void Start()
     {
         inventoryManager = GameObject.Find("Inventory Canvas").GetComponent<InventoryManager>();
@@ -51,6 +45,8 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
 
         //update name and sprite
         this.slot_dyeColor = name;
+        tagPlayer(this.slot_dyeColor);
+
         this.slot_dyeSprite = sprite;
         slotImage.sprite = sprite;
 
@@ -77,47 +73,10 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
         return 0;
     }
 
-    //changing the player's colors
-    public void CheckAndSwap()
+    //Tagging the player to pass the color to the paintPlayer function
+    public void tagPlayer(string colorTag)
     {
-        //count should correspond with the index of the palette database: 
-        //red color, matches red player sprite
-        int count = 0;
-        if(slot_dyeColor == colors_db.GetColor("Red"))
-        {
-            printColor = colors_db.SetColor("Red");
-            SwapSprite(count, printColor);
-        }
-        /*else if()
-        {
-            count = 1;
-            SwapSprite(printColor);
-        }
-        else if()
-        {
-            SwapSprite(printColor);
-        }
-        else if()
-        {
-            SwapSprite(printColor);
-        }
-        else if()
-        {
-            SwapSprite(printColor);
-        }
-        else if()
-        {
-            SwapSprite(printColor);
-        }*/
-    }
-
-    //Function to change the sprite
-    public void SwapSprite(int index, Color color)
-    {
-        //index should correspond with the index of the palette database: red color, matches red player sprite
-        Player.GetComponent<SpriteRenderer>().sprite = playerSprites[index];
-        
-        Debug.Log("The player is now a different color!" + "\n" + "Color: " + color);
+        playerColorTag = colorTag;
     }
 
 
@@ -140,12 +99,12 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
             this.slot_dyeAmount -= 1;
             slotAmount.text = this.slot_dyeAmount.ToString();
 
-            //check the selected dye and swap player sprite
-            //CheckAndSwap();
-
             //when the slot becomes 0
             if(this.slot_dyeAmount <= 0)
+            {
+                this.slot_dyeAmount = 0;
                 EmptySlot();
+            }
         }
         else
         {

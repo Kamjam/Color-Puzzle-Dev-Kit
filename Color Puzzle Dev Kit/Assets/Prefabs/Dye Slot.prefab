@@ -454,4 +454,13 @@ MonoBehaviour:
   currentSlotImage: {fileID: 0}
   selectedPanel: {fileID: 8357163363700550498}
   isSelected: 0
-  setColor: Default
+  Player: {fileID: 0}
+  printColor: {r: 0, g: 0, b: 0, a: 0}
+  playerSprites:
+  - {fileID: -640578808, guid: 1589061628b5ef745a935ec4ad80f90d, type: 3}
+  - {fileID: -203076142, guid: 1589061628b5ef745a935ec4ad80f90d, type: 3}
+  - {fileID: 580779717, guid: 1589061628b5ef745a935ec4ad80f90d, type: 3}
+  - {fileID: -136091852, guid: 1589061628b5ef745a935ec4ad80f90d, type: 3}
+  - {fileID: -839201205, guid: 1589061628b5ef745a935ec4ad80f90d, type: 3}
+  - {fileID: 1182417698, guid: 1589061628b5ef745a935ec4ad80f90d, type: 3}
+  - {fileID: 866904084, guid: 1589061628b5ef745a935ec4ad80f90d, type: 3}

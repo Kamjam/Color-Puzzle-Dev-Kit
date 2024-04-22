@@ -2890,7 +2890,7 @@ GameObject:
   - component: {fileID: 788954456}
   m_Layer: 0
   m_Name: Dye Machine
-  m_TagString: Untagged
+  m_TagString: Machine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3219,37 +3219,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 864194115}
   m_CullTransparentMesh: 1
---- !u!1 &1118968403
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1118968404}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1118968404
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1118968403}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.13690452, y: -0.2039962, z: 9.220424}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1165037652
 GameObject:
   m_ObjectHideFlags: 0
@@ -3746,9 +3715,10 @@ GameObject:
   - component: {fileID: 1213460054}
   - component: {fileID: 1213460056}
   - component: {fileID: 1213460055}
+  - component: {fileID: 1213460058}
   m_Layer: 5
   m_Name: Current Dye
-  m_TagString: Untagged
+  m_TagString: Current Dye Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3810,6 +3780,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1213460053}
   m_CullTransparentMesh: 1
+--- !u!114 &1213460058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213460053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e61c00c05f39d479e566c56a8a46a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 763725803}
+  playerDefault: {fileID: -338335417, guid: 1589061628b5ef745a935ec4ad80f90d, type: 3}
+  printColor: {r: 0, g: 0, b: 0, a: 0}
+  playerSprites: []
 --- !u!1 &1286793710
 GameObject:
   m_ObjectHideFlags: 0
@@ -6210,38 +6196,6 @@ PrefabInstance:
       propertyPath: currentSlotImage
       value: 
       objectReference: {fileID: 1213460055}
-    - target: {fileID: 6397652461131161399, guid: 540daa51c4acc0e4488239ecf99a22d0, type: 3}
-      propertyPath: playerSprites.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6397652461131161399, guid: 540daa51c4acc0e4488239ecf99a22d0, type: 3}
-      propertyPath: playerSprites.Array.data[0]
-      value: 
-      objectReference: {fileID: -640578808, guid: 1589061628b5ef745a935ec4ad80f90d, type: 3}
-    - target: {fileID: 6397652461131161399, guid: 540daa51c4acc0e4488239ecf99a22d0, type: 3}
-      propertyPath: playerSprites.Array.data[1]
-      value: 
-      objectReference: {fileID: -203076142, guid: 1589061628b5ef745a935ec4ad80f90d, type: 3}
-    - target: {fileID: 6397652461131161399, guid: 540daa51c4acc0e4488239ecf99a22d0, type: 3}
-      propertyPath: playerSprites.Array.data[2]
-      value: 
-      objectReference: {fileID: 580779717, guid: 1589061628b5ef745a935ec4ad80f90d, type: 3}
-    - target: {fileID: 6397652461131161399, guid: 540daa51c4acc0e4488239ecf99a22d0, type: 3}
-      propertyPath: playerSprites.Array.data[3]
-      value: 
-      objectReference: {fileID: -136091852, guid: 1589061628b5ef745a935ec4ad80f90d, type: 3}
-    - target: {fileID: 6397652461131161399, guid: 540daa51c4acc0e4488239ecf99a22d0, type: 3}
-      propertyPath: playerSprites.Array.data[4]
-      value: 
-      objectReference: {fileID: -839201205, guid: 1589061628b5ef745a935ec4ad80f90d, type: 3}
-    - target: {fileID: 6397652461131161399, guid: 540daa51c4acc0e4488239ecf99a22d0, type: 3}
-      propertyPath: playerSprites.Array.data[5]
-      value: 
-      objectReference: {fileID: 1182417698, guid: 1589061628b5ef745a935ec4ad80f90d, type: 3}
-    - target: {fileID: 6397652461131161399, guid: 540daa51c4acc0e4488239ecf99a22d0, type: 3}
-      propertyPath: playerSprites.Array.data[6]
-      value: 
-      objectReference: {fileID: 866904084, guid: 1589061628b5ef745a935ec4ad80f90d, type: 3}
     - target: {fileID: 8759184482219733924, guid: 540daa51c4acc0e4488239ecf99a22d0, type: 3}
       propertyPath: m_Name
       value: Dye Slot
@@ -6320,4 +6274,3 @@ SceneRoots:
   - {fileID: 1736363126}
   - {fileID: 788954455}
   - {fileID: 70631256}
-  - {fileID: 1118968404}

@@ -5,15 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Boundary
-  - Orange
-  - Green
-  - Red
-  - Yellow
-  - Purple
-  - Blue
   - Door
   - Dye
   - Machine
+  - Current Dye Slot
   layers:
   - Default
   - TransparentFX
