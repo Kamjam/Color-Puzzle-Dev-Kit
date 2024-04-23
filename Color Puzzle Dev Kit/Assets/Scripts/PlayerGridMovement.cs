@@ -13,7 +13,7 @@ public class PlayerGridMovement : MonoBehaviour
 
     [Tooltip("Handles all collision on the collider mask")]
     public LayerMask colliderMask;
-
+    
     [Tooltip("Player animator")]
     public Animator anim;
 
@@ -45,6 +45,17 @@ public class PlayerGridMovement : MonoBehaviour
         {
             if(Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
+                //in every door in the array, check if the wasDenied variable is active, if so trigger the play knockback
+                for(int i = 0; i < doors.Length; i++)
+                {
+                    //if the door denied the player do the knockback here
+                    if(doors[i].wasDenied)
+                    {
+                        doors[i].enablePopup();
+                        movePointer.position -= horzMovement;
+                    }
+                }
+
                 //checks if the player is colliding with layer mask before allowing the movement, else get pushed back
                 if(!Physics2D.OverlapCircle(movePointer.position + horzMovement, .25f, colliderMask))   
                     movePointer.position += horzMovement;
@@ -54,24 +65,20 @@ public class PlayerGridMovement : MonoBehaviour
             //else if, to prevent diagonal movement
             else if(Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
             {
+                for(int i = 0; i < doors.Length; i++)
+                {
+                    //if the door denied the player do the knockback here
+                    if(doors[i].wasDenied)
+                    {
+                        doors[i].enablePopup();
+                        movePointer.position -= vertMovement;
+                    }
+                }
+
                 if(!Physics2D.OverlapCircle(movePointer.position + vertMovement, .25f, colliderMask))
                     movePointer.position += vertMovement;
                 else
                     movePointer.position -= vertMovement;
-            }
-
-            for(int i = 0; i < doors.Length; i++)
-            {
-                //if the door denied the player do the knockback here
-                if(doors[i].wasDenied)
-                {
-                    doors[i].enablePopup();
-
-                    if(Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
-                        movePointer.position -= horzMovement;
-                    if(Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
-                        movePointer.position -= vertMovement;
-                }
             }
 
             //uncomment below to add proper movement animation

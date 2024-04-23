@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 1301186596768930819}
   - component: {fileID: 4237202024474139348}
   - component: {fileID: 5397390487088850669}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Door
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -202,6 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorColor: 
+  isExit: 0
   doorImage: {fileID: 0}
   popupBG: {fileID: 5920713922830462972}
   popupText: {fileID: 5422667525571824049}
@@ -209,7 +210,7 @@ MonoBehaviour:
   timerStart: 0
   targetTime: 7
   maxTime: 7
-  movePointer: {fileID: 0}
+  wasDenied: 0
 --- !u!61 &5397390487088850669
 BoxCollider2D:
   m_ObjectHideFlags: 0

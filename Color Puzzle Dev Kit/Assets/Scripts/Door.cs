@@ -98,6 +98,8 @@ public class Door : MonoBehaviour
         popupEnabled = false; 
 
         Debug.Log("Door text is no longer visible");
+        
+        wasDenied = false;
     }
 
     void OnCollisionEnter2D(Collision2D collision)

@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PaintPlayer : MonoBehaviour
 {
+    [Tooltip("The color text object")]
+    public TMP_Text colorText;
+
     [Tooltip("The player's sprite renderer")]
     public SpriteRenderer Player;
 
@@ -33,6 +37,7 @@ public class PaintPlayer : MonoBehaviour
 
     void Start()
     {
+        colorText.enabled = false;
         currentSlot = GameObject.Find("Current Dye").GetComponent<CurrentSlot>();
     }
 
@@ -113,14 +118,21 @@ public class PaintPlayer : MonoBehaviour
 
     //Function to change the sprite
     public void swapSprite(int index, Color color)
-    {
+    {        
         printColor = color;
+        colorText.color = color; 
+        
         iscolorSwapped = true;
 
         //index should correspond with the index of the palette database: red color, matches red player sprite
         Player.sprite = playerSprites[index];
 
         if(iscolorSwapped)
+        {
             Debug.Log("The player is now a different color!" + "\n" + "Color: " + ColorUtility.ToHtmlStringRGB(printColor));
+            colorText.text = "Now playing: " + "\n" + ColorUtility.ToHtmlStringRGB(printColor);
+        }
+
+        colorText.enabled = true;
     }
 }
