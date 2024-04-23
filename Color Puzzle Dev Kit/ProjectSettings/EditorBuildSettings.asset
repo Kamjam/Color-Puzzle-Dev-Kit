@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: dff0ecb33ad790e428b5fd600a9a0e95
+  - enabled: 1
     path: Assets/Scenes/Color Puzzle - Demo.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: f0e3534a12f08384a89f65ed096130ed
   m_configObjects: {}

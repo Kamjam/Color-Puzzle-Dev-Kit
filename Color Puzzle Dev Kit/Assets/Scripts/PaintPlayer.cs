@@ -14,20 +14,22 @@ public class PaintPlayer : MonoBehaviour
     public Sprite playerDefault;
 
     //Ref. to the current slot script
+    [Tooltip("The player's mini inventory slot")]
     CurrentSlot currentSlot;
 
     //Ref. to the player sprite that while change
+    [Tooltip("Array for all the player's sprite in the same order as the colors inside the scriptable object color palette array")]
     [SerializeField] Sprite[] playerSprites;
 
+    [Tooltip("The player's color picker color, DO NOT EDIT")]
     [SerializeField] Color printColor;
 
     //Ref. to the Color scriptable object
     [Tooltip("The Game Color Palette Scriptable Object, which stores all the colors for easy access")]
     public GameColorPalette colors_db;
 
-    [Tooltip("Checks Whether or not the player has changed colors, DO NOT EDIT")]
+    [Tooltip("Checks whether or not the player has changed colors, DO NOT EDIT")]
     public bool iscolorSwapped;
-
 
     void Start()
     {

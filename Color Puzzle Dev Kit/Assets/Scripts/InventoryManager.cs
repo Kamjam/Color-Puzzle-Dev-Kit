@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-    
-    [Tooltip("An array of all inventory slots, Drag all/any new slots inside this dropdown")]
+    //Ref. inventory slot script from an array of inventory slots
+    [Tooltip("An array of all inventory slots, Drag all/any new slots from the scene under inventory inside this dropdown")]
     public InventorySlot[] inventorySlot;
     
     public int AddDye(string color, Sprite sprite, int amount)

@@ -17,6 +17,10 @@ public class PlayerGridMovement : MonoBehaviour
     [Tooltip("Player animator")]
     public Animator anim;
 
+    //Ref. door script from an array of doors
+    [Tooltip("An array of all doors slots, Drag all doors from the scene inside this dropdown")]
+    public Door[] doors;
+
     void Start()
     {
         //transform is no longer a child of the player
@@ -24,6 +28,11 @@ public class PlayerGridMovement : MonoBehaviour
     }
 
     void Update()
+    {
+        gridMovement();
+    }
+
+    public void gridMovement()
     {
         Vector3 horzMovement = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
         Vector3 vertMovement = new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
@@ -37,10 +46,8 @@ public class PlayerGridMovement : MonoBehaviour
             if(Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
                 //checks if the player is colliding with layer mask before allowing the movement, else get pushed back
-                if(!Physics2D.OverlapCircle(movePointer.position + horzMovement, .25f, colliderMask))
-                {    
+                if(!Physics2D.OverlapCircle(movePointer.position + horzMovement, .25f, colliderMask))   
                     movePointer.position += horzMovement;
-                }
                 else
                     movePointer.position -= horzMovement;
             }
@@ -48,18 +55,30 @@ public class PlayerGridMovement : MonoBehaviour
             else if(Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
             {
                 if(!Physics2D.OverlapCircle(movePointer.position + vertMovement, .25f, colliderMask))
-                {
                     movePointer.position += vertMovement;
-                }
                 else
                     movePointer.position -= vertMovement;
             }
 
-            //uncomment back to add proper movement animation
+            for(int i = 0; i < doors.Length; i++)
+            {
+                //if the door denied the player do the knockback here
+                if(doors[i].wasDenied)
+                {
+                    doors[i].enablePopup();
+
+                    if(Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
+                        movePointer.position -= horzMovement;
+                    if(Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
+                        movePointer.position -= vertMovement;
+                }
+            }
+
+            //uncomment below to add proper movement animation
             //anim.SetBool("moving", false);
         }
 
-        //uncomment back to add proper movement animation
+        //uncomment below to add proper movement animation
         /*else
             anim.SetBool("moving", true);*/
     }

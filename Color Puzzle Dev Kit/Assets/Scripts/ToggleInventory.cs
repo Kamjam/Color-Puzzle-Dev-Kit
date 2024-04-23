@@ -5,7 +5,7 @@ using UnityEngine;
 public class ToggleInventory : MonoBehaviour
 {
     
-    [Tooltip("The Inventory Menu Canvas")]
+    [Tooltip("The Inventory Menu panel object")]
     public GameObject InventoryMenu;
     
     [Tooltip("Checks whether or not the menu is open, DO NOT EDIT")]
