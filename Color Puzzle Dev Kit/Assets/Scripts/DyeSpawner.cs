@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class DyeSpawner : MonoBehaviour
 {
-    [Tooltip("This dye machine object")]
+    [Tooltip("This dye machine object, which is used to greyscale after activation")]
     public GameObject thisMachine;
 
     [Tooltip("A dye prefab object from the prefab folder")]
