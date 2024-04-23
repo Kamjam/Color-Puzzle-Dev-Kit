@@ -1,0 +1,107 @@
+Design Kit Programming Plan
+
+Concept Breakdown
+Target Concept: Color Puzzle by Jack McPherson
+Art - Pixel
+Genre - Top Down Puzzle Maze
+Narrative - Open to the designer, possible maze-escape themes
+Summary: A simple puzzle maze game in which the player character needs to unlock colored doors 
+by collecting the corresponding color, which changes the player’s color and allows them to 
+pass through that door.
+
+Required Features:
+Swap Tiles
+    -Store a reference to a color
+    -Change the player’s sprite renderer color to match the tile color
+Door
+    -Store reference to a color
+    -Deny access if a player’s color doesn't match a door’s
+    -One door is the “exit” door
+Player
+    -Movement
+    -Interaction with doors and swap tiles
+
+Optional Features:
+    Possibly implement a way to change the color of a swap tile
+    Implementation of a way to ‘find’ colors that could be applied to swap tiles found elsewhere
+    Adjusting the size and complexity of each puzzle by implementing many different colors into a single level
+
+Assets:
+    World: Pixel Tileset
+    Playe: Pixel Sprite
+    Swap Tiles/UI: Pixel Icon Set
+    UI: Inventory Slot Grid
+    Sound
+
+=====================================================================================
+Programming Breakdown
+
+Script Behaviors:
+Swap Tile
+    Stores a color reference and a sprite representing the color
+    Player interaction instantiates a new tile to appear for the player to collect
+        -Plays a sound on instantiation
+        -Show text to indicate the swap
+
+Player Controller
+    2D Top Down Movement
+    Input for interacting with the “Swap Tiles”
+    Door Collisions
+    Wall Collisions
+
+Door
+    Store a reference to a color, and sprite renderer
+    Doesn’t allow the player to pass through its collider if the player is the wrong color
+        -Displays text to show the error to players
+        -Play sounds for incorrect/correct colors used
+    Destroy Itself after the player has unlocked it
+    If this door is the exit door, end the level
+        -The exit door should display a unique icon to differentiate it from other doors
+
+Color “Inventory”
+    A visual indicator of the current color tile that the player has implemented
+    Swaps itself with new colors when the player interacts with a new tile
+    Toggle the button to hide/show
+    Possible separate Inventory of colors used/collected for the level
+
+Exposed Variables:
+    Swap Tile Color
+    Swap Tile Sprite
+    Player Speed
+    Player Color
+    Door Color
+    Exit Door Boolean
+    Current Tile (Player)
+    Current Tile (Inventory)
+    Inventory Toggle
+
+Editor Modifiers:
+Swap Tile
+    An array of swap tiles in a Level that can be dragged into the editor from the hierarchy
+    Ability to change the color of the swap tile from the editor
+    Ability to change the sprite of the swap tile from the editor
+
+Player
+    Change player speed from the editor
+    Change the current color of the player from the editor
+
+Door
+    An array of doors in a level can be dragged into the editor from the hierarchy
+    Ability to change the color of the door from the editor
+    Ability to change the sprite of the door from the editor
+    Ability to toggle which door is the exit door from the editor
+
+Color Inventory
+    Ability to change the current color inside the slot
+    Ability to clear the color inside the slot
+    Ability to toggle the inventory from the hierarchy
+
+=========================================================================================
+Possible Implementation Resources:
+*These are links/videos that may be needed to help fulfill the requirements for this concept
+
+Unity Color Presets
+    SAVING Color Presets in Unity - https://youtu.be/lgS4ML7UeFI
+    Manual: Swatch libraries - https://docs.unity3d.com/2018.3/Documentation/Manual/PresetLibraries.html
+Inventory Slots with Pause
+    Let's Make An Inventory System In Unity! (Series Intro) - https://youtu.be/0wKB_rxtqh4?list=PLSR2vNOypvs6eIxvTu-rYjw2Eyw57nZrU

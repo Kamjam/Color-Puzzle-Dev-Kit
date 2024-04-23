@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Use to make objects in your first level persist throughout your game
 public class DontDestroy : MonoBehaviour
 {
     //array has to be big enough to store all the objects that you want to stay the same across different scenes

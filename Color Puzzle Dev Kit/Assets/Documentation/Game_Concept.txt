@@ -1,0 +1,85 @@
+Game Proposal - Color Puzzle
+
+In Depth Section:
+
+The game I’m proposing is a simple, top down pixel art game that centers around the
+player using colors and color changing abilities to solve various puzzles. The general narrative
+would be open to the game designer, but the core gameplay loop would center around the
+player trying to escape a maze whose obstacles are doors of different colors. The player would
+only be able to walk through doors whose color matches the player’s current color, and the
+player’s color could only be changed by standing on top of specially marked ‘swap tiles’. Each
+swap tile would be marked to indicate how it will change the player’s color and as an added
+layer of complexity, the player, through their actions, would be able to change said mark. For
+example, by going through a green door and interacting with a button, the swap tile that
+originally turned the player green could now turn them blue, allowing them access to a new
+door.
+
+The designer of this game would need to import some fairly basic tilesets in order to
+build out the level. Depending on their familiarity with pixel art, they might want to customize the
+tile sets to fit their purposes. If the designer is proficient with pixel art, they could create a
+custom player character that would be able to integrate the color swapping nature of this game
+into its design.
+
+In order to make this game run, the designer will have to implement several different
+scripted behaviors. The most important ones will be the script that governs whether or not a
+player can go through a door, and the script that manages the color changing behavior for the
+player character. Both scripts will likely be quite straightforward, using a combination of
+[SerializedFields] and OnTriggerEnters to hold information on different colors and compare
+those colors at appropriate times. By modifying the colors in the inspector, the designer will
+have full control over how many colors to include in a level, and thus how complicated or simple
+to make a level.
+
+—-------------------------------------------------------------------------------------------------------------------------
+Bullet Point Section
+Theme
+ Art - Top Down Pixel
+ Genre - Puzzle Maze
+ Title - Color Puzzle(?)
+ Narrative - Open to the designer, possible maze-escape themes
+ 
+Game Mechanics
+ Player is able to change color by interacting with ‘Swap Tiles’
+    Swap Tiles have an indicated color that they will pass on to the player
+ Doors are locked according to color
+    Player can only pass through a door if they currently match its color
+ Goal of each level is to find the ‘exit door’
+ 
+ Assets to import
+    Tilesets for map creation
+    Pixel art avatar to represent the player
+    Possible pixel art creation on behalf of the designer to improve game’s appearance
+
+Scripted Behaviors
+ Swap Tiles
+    -Store a reference to a color
+    -Change player’s sprite renderer color to match tile color
+ Door
+   -Store reference to a color
+   -Deny access if a player’s color doesn't match a door’s
+ Player Controls
+    -Movement
+    -Interaction with doors and swap tiles
+    -Possibly implement a way to change the color of a swap tile?
+ 
+ IMPORTANT NOTE
+    -Designer will have to keep careful track of which colors they’re picking
+    when making puzzles and it is recommended that they use the color
+    saving feature of the Unity Inspector’s color palette
+ 
+ Modified Behavior
+    -Designers have free reign to adjust the size and complexity of 
+    each puzzle by implementing many different colors into a single level
+    -An interesting line of development could be the implementation of a 
+    way to ‘find’ colors that could be applied to swap tiles found elsewhere
+
+—-------------------------------------------------------------------------------------------------------------------------
+CHANGES
+ Added a spawning machine that spawns a color tile
+ Created an inventory system to manage colors the player picks, which then swaps out the
+    tile from there are changes the player's color
+ Colors are objects that have a changeable value for how much are worth 
+    so the player could pick up a bunch of the same color in a level
+ Player has a grid/chess-like style movement instead of being freeform
+ Doors have a boolean that checks whether or not it is the exit door for level implementation
+ Added a GUI the displays a timer, the current level and the color the player current 
+    has loaded for other implementations
