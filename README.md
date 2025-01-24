@@ -74,38 +74,38 @@ ToggleInventory
 
 11. Prefabs (In Alphabetical Order):
 ```
-    Aqua_Dye
-    Blue_Dye
-    Cameras
-        Main Camera
-        Zoomed Camera
-    Door
-    Dye Machine
-    Dye Slot
-        Selection Panel
-        Dye Image
-        Quantity Text
-    Game Manager
-    Green_Dye
-    Inventory Canvas
-        Inventory Grid
-            Dye Slot x6
-    Orange_Dye
-    Pink_Dye
-    Player
-    Pink_Dye
-    Purple_Dye
-    Tileset Grid
-        Walls
-        Grass
-        Plants
-        Floor
-    UI Canvas
-        UI BG
-            Location Text
-            Timer Text
-            Color Text
-            Buttons
-                Reset Btn
-    Yellow_Dye
+Aqua_Dye
+Blue_Dye
+Cameras
+    Main Camera
+    Zoomed Camera
+Door
+Dye Machine
+Dye Slot
+    Selection Panel
+    Dye Image
+    Quantity Text
+Game Manager
+Green_Dye
+Inventory Canvas
+    Inventory Grid
+        Dye Slot x6
+Orange_Dye
+Pink_Dye
+Player
+Pink_Dye
+Purple_Dye
+Tileset Grid
+    Walls
+    Grass
+    Plants
+    Floor
+UI Canvas
+    UI BG
+        Location Text
+        Timer Text
+        Color Text
+        Buttons
+            Reset Btn
+Yellow_Dye
 ```
