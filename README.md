@@ -22,11 +22,11 @@ _Execution Of The Color Puzzle Concept_
  - Free Pixel Font: Fibberish (7x9px) by nathan scott CC0 License - https://caffinate.itch.io/fibberish
 
 4. Color Palette (Which was used/Modified for the sprites):
-    ["Grimbo” Color Palette](https://lospec.com/palette-list/grimbo)
+    ["Grimbo” Color Palette](https://lospec.com/palette-list/grimbo) <br/>
         `#dfe6e0` `#d9c277` `#c17b5c`
         `#85444a` `#4a363c` `#9ba15f`
         `#596e47` `#38453a` `#a9bbcc`
-        `#7687ab` `#444a65` `#222228`
+        `#7687ab` `#444a65` `#222228` <br/>
     Addons for the kit:
        > `#AF7799` `#9177AC` `#AACCCD`
 
