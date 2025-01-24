@@ -2,7 +2,7 @@
 _Execution Of The Color Puzzle Concept_
 
 > [!NOTE]
-> Please take a look at the [**Documentation**]([url](https://github.com/Kamjam/Color-Puzzle-Dev-Kit/tree/main/Color%20Puzzle%20Dev%20Kit/Assets/Documentation/Color%20Puzzle%20-%20READ%20ME%20with%20Images%20%20Folder)).pdf file. It contains an in-depth explanation of Unity entities, scripts, etc.
+> Please take a look at the [**Documentation**](https://github.com/Kamjam/Color-Puzzle-Dev-Kit/tree/main/Color%20Puzzle%20Dev%20Kit/Assets/Documentation/Color%20Puzzle%20-%20READ%20ME%20with%20Images%20%20Folder).pdf file. It contains an in-depth explanation of Unity entities, scripts, etc.
 
 # Navigation
 1. [Asset Breakdown](#Asset-Breakdown)
