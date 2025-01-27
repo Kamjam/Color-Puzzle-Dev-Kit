@@ -13,9 +13,6 @@ _Execution Of The Color Puzzle Concept_
 > [!CAUTION]
 > There are some collision issues with the player and the door, unfortunately. 😢
 
-# Navigation
-1. [Assets](#Asset-Breakdown) 
-
 ## Asset Breakdown
 1. Sprites:
 ```
