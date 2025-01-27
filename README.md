@@ -1,8 +1,17 @@
 # Color Puzzle Dev Kit
 _Execution Of The Color Puzzle Concept_
 
-> [!NOTE]
+> [!IMPORTANT]
 > Please take a look at the [**Documentation**](https://github.com/Kamjam/Color-Puzzle-Dev-Kit/tree/main/Color%20Puzzle%20Dev%20Kit/Assets/Documentation/Color%20Puzzle%20-%20READ%20ME%20with%20Images%20%20Folder).pdf file. It contains an in-depth explanation of Unity entities, scripts, etc.
+
+> [!TIP]
+> Run the Main scene and Fiddle with the inspector options. Many can be customized to do various things. The READ ME PDF is a comprehensive guide if you get stuck or need to reset.
+
+> [!NOTE]
+> For those curious about the original concept that I interpreted and implemented, check out the [**Game_Concept**](https://github.com/Kamjam/Color-Puzzle-Dev-Kit/blob/main/Color%20Puzzle%20Dev%20Kit/Assets/Documentation/Game_Concept.txt).txt file where it explains what the orginal designer wanted for this development kit.
+
+> [!CAUTION]
+> There are some collision issues with the player and the door, unfortunately. 😢
 
 # Navigation
 1. [Assets](#Asset-Breakdown) 
